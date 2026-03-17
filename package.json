@@ -10,6 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:challenge": "vitest run --reporter=verbose",
+    "test:solutions": "vitest run --reporter=verbose --config vitest.solutions.config.ts",
     "lint": "eslint ."
   },
   "dependencies": {

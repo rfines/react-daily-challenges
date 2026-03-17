@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
 // --- Custom Hook: useTimer ---
 
@@ -13,45 +13,55 @@ interface UseTimerReturn {
 }
 
 export function useTimer(intervalMs: number = 1000): UseTimerReturn {
+  const countRef = useRef(0)
   const [count, setCount] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
   const [laps, setLaps] = useState<number[]>([])
 
+  useEffect(() => {
+    countRef.current = count
+  }, [count])
+  
+  
   // BUG 1: This effect has a stale closure over `count`.
   // The setInterval callback captures the initial `count` value (0)
   // and never sees updates because `count` isn't in the dependency array,
   // but adding it would cause the interval to be torn down and recreated every tick.
+ 
   useEffect(() => {
     if (!isRunning) return
 
     const id = setInterval(() => {
-      setCount(count + 1)
+      setCount((prev) => {return prev+1})
     }, intervalMs)
 
     // BUG 3: Missing cleanup — the interval is never cleared.
     // When `isRunning` changes or the component unmounts, the interval
     // keeps firing and calling setCount on an unmounted component.
+    return () => clearInterval(id)
   }, [intervalMs, isRunning])
-
+  
+  
   const start = useCallback(() => {
-    setIsRunning(true)
+    setIsRunning(() => {return true})
   }, [])
 
   const stop = useCallback(() => {
-    setIsRunning(false)
+    setIsRunning(() => {return false})
   }, [])
 
   const reset = useCallback(() => {
-    setIsRunning(false)
-    setCount(0)
-    setLaps([])
+    countRef.current = 0;
+    setIsRunning((prev) => {return false})
+    setCount((prev) => {return 0})
+    setLaps((prev) => {return []})
   }, [])
 
   // BUG 2: This callback captures `count` at creation time due to
   // the empty dependency array. Every call to recordLap pushes the
   // same stale value instead of the current count.
   const recordLap = useCallback(() => {
-    setLaps((prev) => [...prev, count])
+    setLaps((prev) => [...prev, countRef.current])
   }, [])
 
   return { count, isRunning, start, stop, reset, laps, recordLap }

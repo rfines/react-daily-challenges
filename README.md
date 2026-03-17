@@ -1,6 +1,6 @@
 # React Daily Challenges
 
-A personal daily React coding challenge repo for senior-level interview prep. A new challenge appears each morning at 8am — covering state management, data fetching, component design, testing, performance, and more.
+Daily React coding challenges for senior-level interview prep. Each challenge covers state management, data fetching, component design, testing, performance, and more.
 
 ## Getting Started
 
@@ -9,13 +9,27 @@ cd react-daily-challenges
 npm install
 ```
 
+## Repository Structure
+
+```
+challenges/          ← Starter code (this is where you work)
+  2026-03-16-.../
+    README.md        ← Problem statement, requirements, hints
+    Component.tsx    ← Buggy / incomplete / messy code to fix
+    Component.test.tsx ← Tests that define success
+solutions/           ← Reference solutions (no peeking!)
+  2026-03-16-.../
+    Component.tsx    ← Working solution code
+    Component.test.tsx ← Same tests (for verification)
+```
+
+The `challenges/` directory contains starter code with bugs, stubs, or messy code depending on the challenge type. The `solutions/` directory contains reference implementations. Try to solve each challenge on your own before checking the solution!
+
 ## Working on a Challenge
 
-Each challenge lives in `challenges/YYYY-MM-DD-challenge-name/` and contains:
-
-- `README.md` — the problem statement, requirements, and hints
-- Source files (`.tsx`, `.ts`) — the code you need to fix, complete, or debug
-- Test files (`.test.tsx`) — the tests that define success
+1. Read the challenge's `README.md` for the problem statement and requirements
+2. Edit the source files in `challenges/YYYY-MM-DD-challenge-name/`
+3. Run the tests to check your work
 
 ```bash
 # Run a specific challenge's tests
@@ -26,6 +40,14 @@ npm run test:watch -- challenges/2026-03-17
 
 # Run ALL challenge tests
 npm test
+```
+
+## Verifying Solutions
+
+You can run the tests against the reference solutions to confirm they pass:
+
+```bash
+npm run test:solutions -- solutions/2026-03-17
 ```
 
 ## Challenge Types

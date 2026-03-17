@@ -17,11 +17,20 @@
       "directory": "2026-03-17-optimistic-update-engine",
       "completed": false,
       "score": null
+    },
+    {
+      "date": "2026-03-17",
+      "topic": "component-design",
+      "type": "refactor",
+      "title": "The Accordion Cleanup",
+      "directory": "2026-03-17-accordion-cleanup",
+      "completed": false,
+      "score": null
     }
   ],
-  "topic_history": ["hooks", "data-fetching"],
+  "topic_history": ["hooks", "data-fetching", "component-design"],
   "stats": {
-    "total_created": 2,
+    "total_created": 3,
     "completed": 1,
     "streak": 1,
     "last_completed_date": "2026-03-16"

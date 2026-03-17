@@ -23,5 +23,5 @@ Thumbs.db
 # Test
 coverage/
 
-# Solutions (keep them out of git)
+# Personal notes
 challenges/**/SOLUTION.md
