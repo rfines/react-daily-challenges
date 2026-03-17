@@ -1,0 +1,29 @@
+{
+  "challenges_created": [
+    {
+      "date": "2026-03-16",
+      "topic": "hooks",
+      "type": "debug",
+      "title": "The Haunted Timer",
+      "directory": "2026-03-16-stale-closure-timer",
+      "completed": true,
+      "score": null
+    },
+    {
+      "date": "2026-03-17",
+      "topic": "data-fetching",
+      "type": "build-feature",
+      "title": "The Optimistic Update Engine",
+      "directory": "2026-03-17-optimistic-update-engine",
+      "completed": false,
+      "score": null
+    }
+  ],
+  "topic_history": ["hooks", "data-fetching"],
+  "stats": {
+    "total_created": 2,
+    "completed": 1,
+    "streak": 1,
+    "last_completed_date": "2026-03-16"
+  }
+}
