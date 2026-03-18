@@ -15,7 +15,7 @@
       "type": "build-feature",
       "title": "The Optimistic Update Engine",
       "directory": "2026-03-17-optimistic-update-engine",
-      "completed": false,
+      "completed": true,
       "score": null
     },
     {
@@ -24,15 +24,24 @@
       "type": "refactor",
       "title": "The Accordion Cleanup",
       "directory": "2026-03-17-accordion-cleanup",
-      "completed": false,
+      "completed": true,
+      "score": null
+    },
+    {
+      "date": "2026-03-17",
+      "topic": "state-management",
+      "type": "add-coverage",
+      "title": "The Untested Cart",
+      "directory": "2026-03-17-untested-cart",
+      "completed": true,
       "score": null
     }
   ],
-  "topic_history": ["hooks", "data-fetching", "component-design"],
+  "topic_history": ["data-fetching", "component-design", "state-management"],
   "stats": {
-    "total_created": 3,
-    "completed": 1,
-    "streak": 1,
-    "last_completed_date": "2026-03-16"
+    "total_created": 4,
+    "completed": 4,
+    "streak": 2,
+    "last_completed_date": "2026-03-17"
   }
 }

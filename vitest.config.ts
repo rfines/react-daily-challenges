@@ -7,7 +7,14 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/test-setup.ts',
-    include: ['challenges/**/*.test.{ts,tsx}'],
+    include: ['solutions/**/*.test.{ts,tsx}'],
     css: true,
   },
+  coverage: {
+    provider: 'v8',
+    reporter: ['text', 'json', 'html'],
+    collectCoverage: true,
+    include: ['solutions/**/*.{ts,tsx}'],
+    exclude: ['**/*.test.{ts,tsx}', 'src/test-setup.ts', '**/*.types.ts', 'src/main.tsx'],
+  }
 })
