@@ -35,13 +35,22 @@
       "directory": "2026-03-17-untested-cart",
       "completed": true,
       "score": null
+    },
+    {
+      "date": "2026-03-18",
+      "topic": "performance",
+      "type": "fix-tests",
+      "title": "The Mistrusted Table",
+      "directory": "2026-03-18-mistrusted-table",
+      "completed": true,
+      "score": null
     }
   ],
-  "topic_history": ["data-fetching", "component-design", "state-management"],
+  "topic_history": ["component-design", "state-management", "performance"],
   "stats": {
-    "total_created": 4,
-    "completed": 4,
-    "streak": 2,
-    "last_completed_date": "2026-03-17"
+    "total_created": 5,
+    "completed": 5,
+    "streak": 3,
+    "last_completed_date": "2026-03-18"
   }
 }
