@@ -44,13 +44,40 @@
       "directory": "2026-03-18-mistrusted-table",
       "completed": true,
       "score": null
+    },
+    {
+      "date": "2026-03-18",
+      "topic": "hooks",
+      "type": "build-feature",
+      "title": "The Time Machine Hook",
+      "directory": "2026-03-18-undo-redo-hook",
+      "completed": true,
+      "score": null
+    },
+    {
+      "date": "2026-03-19",
+      "topic": "typescript",
+      "type": "debug",
+      "title": "The Broken Notification Hub",
+      "directory": "2026-03-19-notification-hub",
+      "completed": true,
+      "score": null
+    },
+    {
+      "date": "2026-03-20",
+      "topic": "error-handling",
+      "type": "add-coverage",
+      "title": "The Unguarded Dashboard",
+      "directory": "2026-03-20-the-unguarded-dashboard",
+      "completed": false,
+      "score": null
     }
   ],
-  "topic_history": ["component-design", "state-management", "performance"],
+  "topic_history": ["hooks", "typescript", "error-handling"],
   "stats": {
-    "total_created": 5,
-    "completed": 5,
-    "streak": 3,
-    "last_completed_date": "2026-03-18"
+    "total_created": 8,
+    "completed": 7,
+    "streak": 4,
+    "last_completed_date": "2026-03-19"
   }
 }
